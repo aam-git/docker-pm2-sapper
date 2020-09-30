@@ -1,14 +1,12 @@
-FROM keymetrics/pm2:latest-slim
+FROM keymetrics/pm2:latest-alpine
 LABEL maintainer="AAMServices <info@aamservices.uk>"
 
 WORKDIR /usr/src/app
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git && \
-    rm -rf /var/lib/apt/lists/* && \
+RUN apk --no-cache add curl && \
     curl -fsSL "https://raw.githubusercontent.com/aam-git/docker-pm2-sapper/master/ecosystem.config.js" -o ecosystem.config.js && \
-    npx degit "sveltejs/sapper-template#rollup" sapperApp && \
-    cd sapperApp && \
+    npx degit "sveltejs/sapper-template#rollup" sapper && \
+    cd sapper && \
     npm install
 
 EXPOSE 3000

@@ -2,7 +2,7 @@
      apps: [
        {
          name: 'sapper',
-         cwd: '/usr/src/app/sapperApp/',
+         cwd: '/usr/src/app/sapper/',
          script: 'npm run dev',
          instances: 1,
          autorestart: true,

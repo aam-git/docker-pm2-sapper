@@ -1,6 +1,6 @@
-Docker PM2 Sapper v0.27.9
+Docker PM2 Sapper v0.28.0
 ========
-powered by pm2:latest-slim image
+powered by pm2:latest-alpine image
 
 [Sapper][1] The next small thing in web development.
 
@@ -17,7 +17,7 @@ Tag dev runs in live reload mode so you can make changes to the file and they up
 version: '2'
 services:
   sapper:
-    image: aamservices/pm2-sapper:latest
+    image: aamservices/pm2-sapper:dev
     restart: unless-stopped
     volumes:
       - sapper_data:/usr/src/app

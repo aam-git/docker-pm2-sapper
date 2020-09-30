@@ -3,7 +3,7 @@ LABEL maintainer="AAMServices <info@aamservices.uk>"
 
 WORKDIR /usr/src/app
 
-ADD ecosystem.config.js /
+COPY ecosystem.config.js /
 
 RUN apk add --no-cache git && \
     npx degit "sveltejs/sapper-template#rollup" sapper && \

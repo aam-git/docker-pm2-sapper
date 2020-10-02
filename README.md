@@ -1,6 +1,6 @@
-Docker PM2 Sapper v0.27.9
+Docker PM2 Sapper v0.28.0
 ========
-powered by pm2:latest-slim image
+powered by pm2:latest-alpine image
 
 [Sapper][1] The next small thing in web development.
 
